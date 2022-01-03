@@ -26,6 +26,37 @@ public class Principal {
 
         System.out.println(m1);
 
+        BootCamp bootCamp = new BootCamp();
+        bootCamp.setNome("Bootcamp java developer");
+        bootCamp.setDescricao(" descrição bootcamp de java");
+        bootCamp.getConteudos().add(c1);
+        bootCamp.getConteudos().add(c2);
+        bootCamp.getConteudos().add(m1);
 
+        Dev devGuilherme = new Dev();
+        devGuilherme.inscreverBootCamp(bootCamp);
+        devGuilherme.setNome("Guilherme ");
+
+        System.out.println("Conteudos inscritos Gui " + devGuilherme.getConteudosInscritos());
+
+        devGuilherme.progredir();
+
+        System.out.println("Conteudos inscritos Gui " + devGuilherme.getConteudosInscritos());
+        System.out.println("Conteudos concluidos Gui " + devGuilherme.getConteudosConcluidos());
+        System.out.println("XP " + devGuilherme.calcularTotXp());
+
+        System.out.println("-------------------");
+
+        Dev devPedro = new Dev();
+        devPedro.inscreverBootCamp(bootCamp);
+        devPedro.setNome("Pedro ");
+
+        System.out.println("Conteudos inscritos Pedro " + devPedro.getConteudosInscritos());
+
+        devPedro.progredir();
+
+        System.out.println("Conteudos inscritos Pedro " + devPedro.getConteudosInscritos());
+        System.out.println("Conteudos concluidos Pedro " + devPedro.getConteudosConcluidos());
+        System.out.println("XP " + devPedro.calcularTotXp());
     }
 }
